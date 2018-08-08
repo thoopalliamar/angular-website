@@ -1,3 +1,7 @@
 <p>
   project-list works!
 </p>
+<ul>
+  <li *ngFor="let prj of projectlist" [routelink]="['details',prj.name]">{{prj.name}}</li>
+  <router-outlet></router-outlet>
+</ul>
