@@ -7,7 +7,14 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import {RouterModule,Routes} from'@angular/router';
 
+const approutes : Routes=[
+  {path:"home",component:HomeComponent},
+  {path:"aboutus",component:AboutUsComponent},
+  {path:"contactus",component:ContactUsComponent},
+  {path:"projects",component:ProjectListComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +25,8 @@ import { ProjectListComponent } from './project-list/project-list.component';
     ProjectListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(approutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
